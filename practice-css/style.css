@@ -2,7 +2,7 @@
 
 html {
   font-family: 'Helvetica neue', Arial, 'sans serif';
-  font-size: 18px;
+  font-size: 10px;
 }
 
 body {
@@ -51,6 +51,7 @@ main {
 
 main p, main li {
   line-height: 2;
+  font-size: 2em;
 }
 
 img {
