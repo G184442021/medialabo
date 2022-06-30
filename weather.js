@@ -46,6 +46,21 @@ let data = {
 };
 
 ////////// 課題3-2 ここからプログラムを書こう
-console.log(data.name);
-console.log(data.main.temp_max);
-console.log(data.main.temp_min);
+let d = document.querySelector('td#city');
+    d.textContent = data.name ;
+
+ d = document.querySelector('td#wind');
+    d.textContent = data.wind.speed ;
+
+ d = document.querySelector('td#direction');
+    d.textContent = data.wind.deg ;
+
+ d = document.querySelector('td#temperture');
+    d.textContent = data.main.temp_max ;
+
+ d = document.querySelector('td#temperture');
+    d.textContent = data.main.temp_min ;
+
+
+
+

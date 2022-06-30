@@ -10,6 +10,7 @@ let kaisu = 0;
 hantei();
 
 
+
 // ボタンを押した後の処理をする関数 hantei() の定義
 function hantei() {
     let yoso = 4;       // 第5回課題:テキストボックスの数値をここに代入
@@ -29,7 +30,7 @@ function hantei() {
       r.textContent = '答えは'+kotae+'でした. すでにゲームは終わっています.' ;
     }else if(yoso===kotae){
       r.textContent = '正解です.おめでとう!';
-            kaisu=4;
+            
        }
 
          else if(kaisu===3){
