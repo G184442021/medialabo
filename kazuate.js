@@ -20,7 +20,8 @@ function hantei() {
     //        判定結果はコンソールに出力すること
    
     kaisu=kaisu+1;
-    console.log(kaisu +'回目の予想:'+yoso);
+    let s = document.querySelector('span#kaisuu');
+    s.textContent = kaisu ;
 
     if(kaisu>=4){
         console.log('答えは'+kotae+'でした. すでにゲームは終わっています.');
