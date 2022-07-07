@@ -12,11 +12,11 @@ c3.addEventListener('mouseenter', changeColor);
 
 // cell4: マウスポインタをここで動かすと色が変わる
 let c4 = document.querySelector('#cell4');
-c4.addEventListener('mouseover', changeColor);
+c4.addEventListener('mousemove', changeColor);
 
 // cell5: マウスポインタがここから離れると色が変わる
 let c5 = document.querySelector('#cell5');
-c5.addEventListener('focus', changeColor);
+c5.addEventListener('mouseout', changeColor);
 
 // cell6: フォーカスすると色が変わる
 let c6 = document.querySelector('#cell6');
