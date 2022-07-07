@@ -7,13 +7,22 @@ let kaisu = 0;
 
 // 予想を4回実行する
 // 将来: ボタンを押したら， hantei() を呼び出すように修正する
-hantei();
+
 
 
 
 // ボタンを押した後の処理をする関数 hantei() の定義
+
+let b1 = document.querySelector('button#print');
+b1.addEventListener('click', hantei);
+
 function hantei() {
-    let yoso = 4;       // 第5回課題:テキストボックスの数値をここに代入
+    let i = document.querySelector('input[name="seisu"]');
+    let y = i.value;
+    let yoso = Number(y);
+    
+    
+    // 第5回課題:テキストボックスの数値をここに代入
     // 課題3-1：ここの判定処理を作成する．
     //        ページに表示する方法はまだ習っていないので
     //        判定結果はコンソールに出力すること
@@ -34,11 +43,11 @@ function hantei() {
        }
 
          else if(kaisu===3){
-          r.textContent ='まちがい. 残念でした';
+          r.textContent ='まちがい.答えは'+kotae+'でした';
              }else if(kotae>yoso){
               r.textContent ='まちがい. 答えはもっと大きいですよ';
                 }else if(kotae<yoso){
-                  r.textContent ='まちがい. 答えはもっと小きいですよ';
+                  r.textContent ='まちがい. 答えはもっと小さいですよ';
 }
 
 

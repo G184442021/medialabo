@@ -8,6 +8,12 @@
   </head>
 <body>
 <h1>世界の天気</h1>
+
+<label for="toshimei">都市名: </label>
+    <input type="text" name="toshimei" size="20">
+    <button id="print">検索</button>
+
+
 <table>
  
   <tbody>
@@ -26,9 +32,13 @@
        
       </tr>
     <tr>
-          <td>気温</td>
-          <td id="temperture"></td>
+          <td>最高気温</td>
+          <td id="tempermax"></td>
       </tr>
+      <tr>
+        <td>最低気温</td>
+        <td id="tempermin"></td>
+    </tr>
   </tbody>
 </table>
 

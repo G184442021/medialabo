@@ -6,6 +6,25 @@ b1.addEventListener('click', changeH1ColorRed);
 
 //// 以下，練習5-2 でコードを追加
 
+let b2 = document.querySelector('button#random');
+b2.addEventListener('click',changeBackgroundColorRandom);
+
+
+function changeBackgroundColorRandom() {
+
+	let r = Math.floor(Math.random() * 256);
+	let g = Math.floor(Math.random() * 256);
+	let b = Math.floor(Math.random() * 256);
+
+	let color = 'rgb(' + r + ',' + g + ',' + b + ')';
+
+	let h1 = document.querySelector('h1');
+
+	h1.style.color = 'color';
+
+
+}
+
 
 ////////////////////////////////////////////////////////
 // 2. イベントハンドラ（イベントが発生したら実行する関数）

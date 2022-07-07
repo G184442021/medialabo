@@ -46,8 +46,15 @@ let data = {
 };
 
 ////////// 課題3-2 ここからプログラムを書こう
-let d = document.querySelector('td#city');
-    d.textContent = data.name ;
+
+let b1 = document.querySelector('button#print');
+b1.addEventListener('click', hantei);
+
+function hantei (){
+  let i = document.querySelector('input[name="toshimei"]');
+  let y = i.value;
+
+
 
  d = document.querySelector('td#wind');
     d.textContent = data.wind.speed ;
@@ -55,12 +62,12 @@ let d = document.querySelector('td#city');
  d = document.querySelector('td#direction');
     d.textContent = data.wind.deg ;
 
- d = document.querySelector('td#temperture');
+ d = document.querySelector('td#tempermax');
     d.textContent = data.main.temp_max ;
 
- d = document.querySelector('td#temperture');
+ d = document.querySelector('td#tempermin');
     d.textContent = data.main.temp_min ;
 
-
+}
 
 
