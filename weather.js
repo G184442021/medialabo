@@ -87,13 +87,20 @@ function showResult(resp) {
   }
 
   // data をコンソールに出力
-let x = document.querySelector('#wind');
-x.textContent = data.wind.speed;
+let a = document.querySelector('#wind');
+a.textContent = data.wind.speed;
 
+let b = document.querySelector('#city');
+b.textContent = data.name;
 
+let c = document.querySelector('#direction');
+c.textContent = data.wind.deg;
 
+let d = document.querySelector('#tempermax');
+d.textContent = data.main.temp_max;
 
-
+let e = document.querySelector('#tempermin');
+e.textContent = data.main.temp_min;
 }
 
 // 通信エラーが発生した時の処理
