@@ -62,13 +62,16 @@ let b1 = document.querySelector('button#sendRequest');
 b1.addEventListener('click', sendRequest);
 
 function sendRequest (){
-  let id = document.querySelector('input[name="toshimei"]');
-  let y = id.value;
-  let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/'+y+'.json';
-   
- 
+  let url;
+  let rs = document.querySelectorAll('input[name="country"]');
+  for (let r of rs) {
+    if (r.checked) {        // r が選択されていたら
+      url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/'+r.value+'.json';
+    }
+  }
 
-             axios.get(url)
+
+      axios.get(url)
              .then(showResult)   // 通信成功
              .catch(showError)   // 通信失敗
              .then(finish);      // 通信の最後の処理
@@ -84,38 +87,13 @@ function showResult(resp) {
   }
 
   // data をコンソールに出力
-for (let n of data.base.main){
-
-let td = doqument.createElement("td");
-td.textContnt = n.name;
-//let p = doqumwnt.querySelector("p#a");
-p.insertAdjacentElement('afterend',td);
+let x = document.querySelector('#wind');
+x.textContent = data.wind.speed;
 
 
 
 
 
-}
-
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // data.x を出力
-  tr.log(data.x);
 }
 
 // 通信エラーが発生した時の処理
